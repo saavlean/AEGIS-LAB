@@ -1,0 +1,39 @@
+# Variables de entorno
+.env
+.env.*
+!.env.example
+
+# Configuración local de herramientas
+.opencode/
+
+# Datos generados localmente
+data/
+backend/data/
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Node / frontend
+node_modules/
+dist/
+build/
+
+# Logs
+*.log
+
+# Repositorios o documentación externa de referencia
+reference/
+
+# IDE / Sistema operativo
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

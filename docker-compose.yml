@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    container_name: aegis-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - OLLAMA_URL=http://172.17.0.1:11434
+      - OLLAMA_MODEL=qwen3:8b
+      - DATABASE_PATH=/app/data/audit.db
+    volumes:
+      - ./backend:/app
+      - audit_data:/app/data
+    restart: unless-stopped
+
+  frontend:
+    build: ./frontend
+    container_name: aegis-frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - VITE_API_URL=http://localhost:8000
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+volumes:
+  audit_data:
