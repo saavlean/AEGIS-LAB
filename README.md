@@ -11,13 +11,6 @@ El proyecto funciona como prueba de concepto para experimentar con IA aplicada a
 * docker-compose.yml: definición de servicios.
 * .env.example: variables de entorno de ejemplo.
 
-## Notas
-
-* .env no se sube al repositorio.
-* data/ y backend/data/ no se suben porque contienen datos generados localmente.
-* .opencode/ no se sube porque contiene información local.
-* reference/ no se sube porque contiene proyectos externos usados como referencia.
-
 ## Ejecución local
 
 Para iniciar:
